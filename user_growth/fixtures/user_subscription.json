@@ -1,0 +1,42 @@
+[
+ {
+  "doctype": "User Subscription",
+  "customer_name": "演示用户-张三",
+  "mobile": "13800138001",
+  "email": "demo@example.com",
+  "city": "杭州",
+  "channel": "官网",
+  "plan_type": "企业版",
+  "status": "已开通",
+  "monthly_revenue": 999,
+  "subscription_date": "2026-01-15",
+  "remark": "Fixture 预设演示数据"
+ },
+ {
+  "doctype": "User Subscription",
+  "customer_name": "演示用户-李四",
+  "mobile": "13800138002",
+  "email": "demo2@example.com",
+  "city": "上海",
+  "channel": "应用商店",
+  "plan_type": "专业版",
+  "status": "已开通",
+  "monthly_revenue": 299,
+  "subscription_date": "2026-03-01",
+  "remark": "Fixture 预设演示数据"
+ },
+ {
+  "doctype": "User Subscription",
+  "customer_name": "演示用户-王五",
+  "mobile": "13800138003",
+  "email": "demo3@example.com",
+  "city": "北京",
+  "channel": "合作伙伴",
+  "plan_type": "旗舰版",
+  "status": "已流失",
+  "monthly_revenue": 2999,
+  "subscription_date": "2025-06-01",
+  "churn_date": "2026-02-28",
+  "remark": "Fixture 预设演示数据-已流失"
+ }
+]

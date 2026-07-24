@@ -1,0 +1,149 @@
+{
+ "doctype": "DocType",
+ "name": "User Subscription",
+ "module": "User Growth",
+ "custom": 0,
+ "naming_rule": "By 'US-.YYYY.-.######'",
+ "autoname": "naming_series:US-.YYYY.-.#####",
+ "is_submittable": 0,
+ "is_child_table": 0,
+ "is_tree": 0,
+ "is_virtual": 0,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "amend": 0,
+   "cancel": 0,
+   "submit": 0,
+   "email": 1,
+   "print": 1,
+   "report": 1,
+   "import": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "title_field": "customer_name",
+ "search_fields": "customer_name, mobile, email",
+ "in_global_search": 1,
+ "listview_settings": "{\"hide_name_column\": 1}",
+ "fields": [
+  {
+   "fieldname": "sb_basic",
+   "fieldtype": "Section Break",
+   "label": "\u5ba2\u6237\u4fe1\u606f"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "\u5ba2\u6237\u59d3\u540d",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "\u624b\u673a\u53f7",
+   "reqd": 0,
+   "in_list_view": 1,
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "\u90ae\u7bb1",
+   "options": "Email"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "\u57ce\u5e02/\u5730\u533a",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "\u6765\u6e90\u6e20\u9053",
+   "options": "\u5b98\u7f51\n\u5e94\u7528\u5546\u5e97\n\u7ebf\u4e0b\u63a8\u5e7f\n\u5408\u4f5c\u4f19\u4f34\n\u79fb\u52a8\u7aef\u63a8\u5e7f",
+   "default": "\u5b98\u7f51",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_service",
+   "fieldtype": "Section Break",
+   "label": "\u670d\u52a1\u4fe1\u606f"
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "label": "\u670d\u52a1\u7c7b\u578b",
+   "reqd": 1,
+   "options": "\u57fa\u7840\u7248\n\u4e13\u4e1a\u7248\n\u4f01\u4e1a\u7248\n\u65d7\u8230\u7248",
+   "default": "\u57fa\u7840\u7248",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "\u72b6\u6001",
+   "reqd": 1,
+   "options": "\u5df2\u5f00\u901a\n\u5df2\u6d41\u5931\n\u6682\u505c",
+   "default": "\u5df2\u5f00\u901a",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "monthly_revenue",
+   "fieldtype": "Currency",
+   "label": "\u6708\u4ed8\u8d39\u91d1\u989d",
+   "options": "CNY",
+   "default": 0,
+   "non_negative": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_date",
+   "fieldtype": "Date",
+   "label": "\u5f00\u901a\u65e5\u671f",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "churn_date",
+   "fieldtype": "Date",
+   "label": "\u6d41\u5931\u65e5\u671f",
+   "depends_on": "eval:doc.status == '\u5df2\u6d41\u5931'",
+   "mandatory_depends_on": "eval:doc.status == '\u5df2\u6d41\u5931'",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_extra",
+   "fieldtype": "Section Break",
+   "label": "\u9644\u52a0\u4fe1\u606f"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "\u5907\u6ce8"
+  }
+ ]
+}

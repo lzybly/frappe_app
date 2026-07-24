@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "user_growth"
+version = "1.0.0"
+description = "用户增长分析系统 — 追踪用户开通/流失数据"
+authors = [
+    {name = "NEXUS", email = "admin@nexus.local"},
+]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "frappe>=16.0.0",
+]
+
+[tool.bench]
+app_name = "user_growth"

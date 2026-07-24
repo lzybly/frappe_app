@@ -1,0 +1,14 @@
+{
+ "doctype": "Page",
+ "name": "user-growth-dashboard",
+ "page_name": "user-growth-dashboard",
+ "title": "用户增长数据大屏",
+ "icon": "fa fa-line-chart",
+ "module": "User Growth",
+ "standard": "Yes",
+ "system_page": 0,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"}
+]
+}

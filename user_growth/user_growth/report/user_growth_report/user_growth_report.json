@@ -1,0 +1,18 @@
+{
+ "doctype": "Report",
+ "name": "User Growth Report",
+ "report_name": "User Growth Report",
+ "module": "User Growth",
+ "is_standard": "Yes",
+ "report_type": "Script Report",
+ "ref_doctype": "User Subscription",
+ "filters": [
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "起始月份", "default": "2024-07-01"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "截止月份", "default": "2026-06-01"},
+  {"fieldname": "plan_type", "fieldtype": "Select", "label": "服务类型", "options": "\n基础版\n专业版\n企业版\n旗舰版"},
+  {"fieldname": "channel", "fieldtype": "Select", "label": "来源渠道", "options": "\n官网\n应用商店\n线下推广\n合作伙伴\n移动端推广"}
+ ],
+ "roles": [
+  {"role": "System Manager"}
+ ]
+}
